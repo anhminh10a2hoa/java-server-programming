@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+
+	<display-name>PostRequestHandler</display-name>
+	<description>
+      Servlet Demos.
+    </description>
+	<!-- Define servlets that are included in the example application -->
+
+	<servlet>
+		<!--Here we declare servlet's registered name -->
+		<servlet-name>PostRequestHandler</servlet-name>
+		<servlet-class>servlet.PostRequestHandler</servlet-class>
+	</servlet>
+
+	<servlet>
+		<!--Here we declare servlet's registered name -->
+		<servlet-name>SearchDate</servlet-name>
+		<servlet-class>servlet.SearchDate</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<!--Here we declare servlet's registered name -->
+		<servlet-name>SearchName</servlet-name>
+		<servlet-class>servlet.SearchName</servlet-class>
+	</servlet>
+	<!--Here we say that the LoginServlet can be invoked by writing the path 
+		and login to the address bar of the browser -->
+
+	<servlet-mapping>
+		<servlet-name>PostRequestHandler</servlet-name>
+		<url-pattern>/post_request_handler</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SearchDate</servlet-name>
+		<url-pattern>/get_date_handler</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SearchName</servlet-name>
+		<url-pattern>/get_name_handler</url-pattern>
+	</servlet-mapping>
+</web-app>
