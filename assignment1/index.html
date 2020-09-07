@@ -4,16 +4,16 @@
 <title></title>
 </head>
 <body>
-	<form method='POST' action=post_request_handler>
+	<form method='POST' action=forum>
 		<h1>Message Form</h1>
 		<table>
 			<tr>
 				<th>Your name:</th>
-				<td><input type="text" name="name" size="20"></td>
+				<td><input type="text" name="name" size="20" required></td>
 			</tr>
 			<tr>
 				<th>Your message:</th>
-				<td><input type="text" name="message" size="20"></td>
+				<td><input type="text" name="message" size="20" required></td>
 			</tr>
 			<tr>
 				<td></td>
@@ -21,29 +21,29 @@
 			</tr>
 		</table>
 	</form>
-	<form method='POST' action=get_name_handler>
+	<form method='POST' action=get_name>
 		<h1>Search name</h1>
 		<table>
 			<tr>
 				<th>Search name:</th>
-				<td><input type="text" name="nameSearch" size="20"></td>
+				<td><input type="text" name="nameSearch" size="20" required></td>
 			</tr>
 			<tr>
 				<td></td>
-				<td><input type="submit" value="Submit"></td>
+				<td><input type="submit" value="Search"></td>
 			</tr>
 		</table>
 	</form>
-	<form method='POST' action=get_date_handler>
+	<form method='POST' action=get_date>
 		<h1>Search date</h1>
 		<table>
 			<tr>
 				<th>Search date:</th>
-				<td><input type="text" name="dateSearch" size="20"></td>
+				<td><input type="text" name="dateSearch" size="20" required></td>
 			</tr>
 			<tr>
 				<td></td>
-				<td><input type="submit" value="Submit"></td>
+				<td><input type="submit" value="Search"></td>
 			</tr>
 		</table>
 	</form>

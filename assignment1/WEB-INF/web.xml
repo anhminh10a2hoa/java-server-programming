@@ -33,14 +33,14 @@
 
 	<servlet-mapping>
 		<servlet-name>PostRequestHandler</servlet-name>
-		<url-pattern>/post_request_handler</url-pattern>
+		<url-pattern>/forum</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>SearchDate</servlet-name>
-		<url-pattern>/get_date_handler</url-pattern>
+		<url-pattern>/get_date</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>SearchName</servlet-name>
-		<url-pattern>/get_name_handler</url-pattern>
+		<url-pattern>/get_name</url-pattern>
 	</servlet-mapping>
 </web-app>
