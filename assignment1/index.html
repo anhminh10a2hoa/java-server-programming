@@ -5,15 +5,15 @@
 </head>
 <body>
 	<form method='POST' action=forum>
-		<h1>Message Form</h1>
+		<h1>Add message</h1>
 		<table>
 			<tr>
-				<th>Your name:</th>
+				<th>Name:</th>
 				<td><input type="text" name="name" size="20" required></td>
 			</tr>
 			<tr>
-				<th>Your message:</th>
-				<td><input type="text" name="message" size="20" required></td>
+				<th>Message:</th>
+				<td><textarea name="message" rows="4" cols="50" required></textarea></td>
 			</tr>
 			<tr>
 				<td></td>
@@ -39,7 +39,7 @@
 		<table>
 			<tr>
 				<th>Search date:</th>
-				<td><input type="text" name="dateSearch" size="20" required></td>
+				<td><input type="date" name="dateSearch" size="20" required></td>
 			</tr>
 			<tr>
 				<td></td>
