@@ -1,0 +1,69 @@
+<!Doctype html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+	<form method='POST' action=forum>
+		<h1>Add message</h1>
+		<table>
+			<tr>
+				<th>Name:</th>
+				<td><input type="text" name="name" size="20" required></td>
+			</tr>
+			<tr>
+				<th>Message:</th>
+				<td><textarea name="message" rows="4" cols="50" required></textarea></td>
+			</tr>
+			<tr>
+				<th>Sports:</th>
+				<td>
+					<INPUT type="CHECKBOX" name="sportOptions" value="Football">Football
+					<INPUT type="CHECKBOX" name="sportOptions" value="Badminton">Badminton
+					<INPUT type="CHECKBOX" name="sportOptions" value="Basketball">Basketball
+					<INPUT type="CHECKBOX" name="sportOptions" value="Tennis">Tennis
+				</td>
+			</tr>
+			<tr>
+				<th>Views:</th>
+				<td>
+					<INPUT type="CHECKBOX" name="viewOptions" value="Sea">Sea
+					<INPUT type="CHECKBOX" name="viewOptions" value="Jungle">Jungle
+					<INPUT type="CHECKBOX" name="viewOptions" value="Sky">Sky
+					<INPUT type="CHECKBOX" name="viewOptions" value="Home">Home
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Submit"></td>
+			</tr>
+		</table>
+	</form>
+	<form method='POST' action=get_name>
+		<h1>Search name</h1>
+		<table>
+			<tr>
+				<th>Search name:</th>
+				<td><input type="text" name="nameSearch" size="20" required></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Search"></td>
+			</tr>
+		</table>
+	</form>
+	<form method='POST' action=get_date>
+		<h1>Search date</h1>
+		<table>
+			<tr>
+				<th>Search date:</th>
+				<td><input type="date" name="dateSearch" size="20" required></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Search"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
