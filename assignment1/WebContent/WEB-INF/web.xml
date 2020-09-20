@@ -32,6 +32,10 @@
 		and login to the address bar of the browser -->
 
 	<servlet-mapping>
+		<servlet-name>UserFormServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
 		<servlet-name>PostRequestHandler</servlet-name>
 		<url-pattern>/forum</url-pattern>
 	</servlet-mapping>
