@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+	<display-name>Assignment6</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<display-name>Welcome Servlet</display-name>
+	<description>
+		Servlet Demos
+	</description>
+	<!-- Define a security constraint on this application -->
+	<security-constraint>
+		<web-resource-collection>
+		<web-resource-name>Servlet information page</web-resource-name>
+		<url-pattern>/*</url-pattern>
+		<http-method>GET</http-method>
+		<http-method>POST</http-method>
+	</web-resource-collection>
+	<auth-constraint>
+	<!-- This role is not in the default user directory -->
+		<role-name>user</role-name>
+		<role-name>friend</role-name>
+	</auth-constraint>
+	<user-data-constraint>
+	<!-- The following forces using https protocol  -->
+		<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+	</user-data-constraint>
+	</security-constraint>
+	<!-- Define the login configuration for this application -->
+	<login-config>
+		<auth-method>FORM</auth-method>
+	<!--Realms in Tomcat are databases with user ID and password information.
+	Realms in Tomcat can be configured via the server.xml or context.xml files.-->
+		<realm-name>Tomcat Manager Application</realm-name>
+		<form-login-config>
+			<form-login-page>/login.html</form-login-page>
+			<form-error-page>/login_error.html</form-error-page>
+		</form-login-config>
+	</login-config>
+	<!-- Security roles referenced by this web application -->
+	<context-param>
+		<param-name>upload_path</param-name>
+		<param-value>upload/public/files</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>data_file</param-name>
+		<param-value>data.txt</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>data_path</param-name>
+		<param-value>data</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>FUS</servlet-name>
+		<servlet-class>servlet.FileUploadServlet</servlet-class>
+		<multipart-config>
+			<max-file-size>10485760</max-file-size>
+			<max-request-size>20971520</max-request-size>
+			<file-size-threshold>5242880</file-size-threshold>
+		</multipart-config>
+	</servlet>
+	<servlet>
+		<servlet-name>logout</servlet-name>
+		<servlet-class>servlet.LogoutServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>FUS</servlet-name>
+		<url-pattern>/file_upload_servlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>logout</servlet-name>
+		<url-pattern>/logout.html</url-pattern>
+	</servlet-mapping>
+
+</web-app>
