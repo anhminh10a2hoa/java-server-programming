@@ -17,6 +17,17 @@
 		<param-name>upload_path</param-name>
 		<param-value>upload/public/files</param-value>
 	</context-param>
+
+	<context-param>
+		<param-name>data_file</param-name>
+		<param-value>data.txt</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>data_path</param-name>
+		<param-value>data</param-value>
+	</context-param>
+	
 	<servlet>
 		<servlet-name>FUS</servlet-name>
 		<servlet-class>servlet.examples.FileUploadServlet</servlet-class>
