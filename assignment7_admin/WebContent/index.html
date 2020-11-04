@@ -1,0 +1,56 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style type="text/css">
+th, td {
+	text-align: left;
+	padding: 10px;
+}
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<form action="file_upload_servlet" method="post"
+		enctype="multipart/form-data">
+		<h1>Upload image</h1>
+		<table>
+			<tr>
+				<th>Username:</th>
+				<th><input type="text" name="username" placeholder="Your name" required></th>
+			</tr>
+			<tr>
+				<th>Comment:</th>
+				<td><textarea name="comment" rows="4" cols="50" placeholder="Your comment" required></textarea></td>
+			</tr>
+			<!-- <tr><th> Select File to Upload</th><th><input type="file" name="fileName"></th></tr> -->
+			<tr>
+				<th>Image:</th>
+				<th><input type="file" name="fileName" multiple></th>
+			</tr>
+			<tr>
+				<th></th>
+				<th><input type="submit" class="btn btn-primary" onClick="clickSubmit()" value="Upload"></th>
+			</tr>
+		</table>
+	</form>
+	<form method='get' action=file_upload_servlet>
+		<h1>Search name</h1>
+		<table>
+			<tr>
+				<th>Search name:</th>
+				<td><input type="text" name="nameSearch" size="20" required></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Search" class="btn btn-danger"></td>
+			</tr>
+		</table>
+	</form>
+	<div style='text-align:center'><a href='logout.html'>Logout</a></div>
+</body>
+</html>
