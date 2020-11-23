@@ -27,7 +27,7 @@
 	<auth-constraint>
 	<!-- This role is not in the default user directory -->
 		<role-name>user</role-name>
-		<role-name>friend</role-name>
+		<role-name>admin</role-name>
 	</auth-constraint>
 	<user-data-constraint>
 	<!-- The following forces using https protocol  -->
