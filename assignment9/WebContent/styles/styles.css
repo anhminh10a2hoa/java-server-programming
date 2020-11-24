@@ -1,0 +1,28 @@
+.container {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.container .login-form {
+	position: absolute;
+	top: 30%
+}
+
+.container .login-form a {
+	cursor: pointer;
+}
+
+.container h1 {
+	position: absolute;
+	top: 20%;
+}
+
+.container .login-form .login-button {
+	margin: auto
+}
+
+body {
+	background-color: #f4f7c5;
+}
