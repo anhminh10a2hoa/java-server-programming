@@ -1,0 +1,31 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel='stylesheet' type='text/css' href='styles/styles.css'>
+</head>
+<body>
+	<div class="container">
+		<h1>Sign up</h1>
+		<form class="login-form" action="signup_user" method="post"
+			enctype="multipart/form-data">
+			<label for="username">Username: </label> <input type="text"
+				name="username" required><br> <br> <label
+				for="password">Password:</label> <input type="password"
+				name="password" required><br> <br> <label
+				for="cfpassword">Confirm password:</label> <input type="password"
+				name="cfpassword" required><br> <br> <input
+				class="login-button" type="submit" value="Sign up"> <a
+				onclick="window.location.replace('http://localhost:8080/assignment9/login.html')">Already
+				have an account? Sign in</a>
+		</form>
+	</div>
+</body>
+</html>
